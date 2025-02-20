@@ -50,6 +50,20 @@
 		height: calc(100dvh - 165px);
 		overflow-y: auto;
 
+		&::-webkit-scrollbar {
+			width: 9px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $gray_light_2;
+			border-radius: 6px;
+			border: 2px solid $white;
+		}
+
 		.header__aside_list {
 			font-weight: 700;
 			line-height: 22px;

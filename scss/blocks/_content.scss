@@ -91,12 +91,9 @@
 			line-height: 18px;
 			position: relative;
 
-			&:before {
-				content: '';
-				display: block;
+			img {
 				width: 16px;
 				height: 13px;
-				background: url('./../images/icons/xtwitter.svg') center / 100% no-repeat;
 			}
 		}
 

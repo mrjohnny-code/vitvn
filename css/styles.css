@@ -65,6 +65,7 @@ input {
           appearance: none;
   border-radius: 0;
   outline: none;
+  cursor: text;
 }
 
 button::-moz-focus-inner,
@@ -82,6 +83,9 @@ button {
      -moz-appearance: none;
           appearance: none;
   transition: all 0.2s ease;
+}
+
+button {
   cursor: pointer;
 }
 
@@ -195,7 +199,6 @@ body.aside_menu_opened {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 9px 15px;
   border-bottom: 1px solid #c7c7c7;
   position: relative;
 }
@@ -204,6 +207,7 @@ body.aside_menu_opened {
   align-items: center;
   justify-content: flex-start;
   gap: 15px;
+  padding: 9px 15px;
   font-size: 1.4rem;
   line-height: 17px;
   text-wrap: nowrap;
@@ -286,7 +290,7 @@ body.aside_menu_opened {
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: rgba(42, 42, 42, 0.6);
+  background-color: rgba(42, 42, 42, 0.2);
 }
 .header.fixed {
   position: fixed;
@@ -630,6 +634,17 @@ body.aside_menu_opened {
   height: calc(100dvh - 165px);
   overflow-y: auto;
 }
+.header__aside_menu .header__aside_nav::-webkit-scrollbar {
+  width: 9px;
+}
+.header__aside_menu .header__aside_nav::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.header__aside_menu .header__aside_nav::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 6px;
+  border: 2px solid #ffffff;
+}
 .header__aside_menu .header__aside_nav .header__aside_list {
   font-weight: 700;
   line-height: 22px;
@@ -967,12 +982,9 @@ body.aside_menu_opened {
   line-height: 18px;
   position: relative;
 }
-.content__authors_link:before {
-  content: "";
-  display: block;
+.content__authors_link img {
   width: 16px;
   height: 13px;
-  background: url("./../images/icons/xtwitter.svg") center/100% no-repeat;
 }
 .content__authors a {
   transition: opacity 0.2s ease;
@@ -1050,13 +1062,13 @@ body.aside_menu_opened {
   transition: none;
 }
 .registration__form input:valid {
-  outline: 2px solid green;
+  border: 2px solid green;
 }
 .registration__form input:invalid {
-  outline: 2px solid #e00710;
+  border: 2px solid #e00710;
 }
 .registration__form input:focus-visible {
-  outline: 2px solid #0077c8;
+  border: 2px solid #0077c8;
 }
 .registration__form .registration__button {
   padding: 13px;

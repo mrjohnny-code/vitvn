@@ -29,15 +29,15 @@
 			transition: none;
 
 			&:valid {
-				outline: 2px solid green;
+				border: 2px solid green;
 			}
 
 			&:invalid {
-				outline: 2px solid $red;
+				border: 2px solid $red;
 			}
 
 			&:focus-visible {
-				outline: 2px solid $blue_2;
+				border: 2px solid $blue_2;
 			}
 		}
 

@@ -2,7 +2,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 9px 15px;
 	border-bottom: 1px solid $gray_light;
 	position: relative;
 
@@ -11,6 +10,7 @@
 		align-items: center;
 		justify-content: flex-start;
 		gap: 15px;
+		padding: 9px 15px;
 		font-size: 1.4rem;
 		line-height: 17px;
 		text-wrap: nowrap;
