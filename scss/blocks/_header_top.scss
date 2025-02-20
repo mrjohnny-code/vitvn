@@ -1,0 +1,73 @@
+.header__top_nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 9px 15px;
+	border-bottom: 1px solid $gray_light;
+	position: relative;
+
+	.header__nav_list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 15px;
+		font-size: 1.4rem;
+		line-height: 17px;
+		text-wrap: nowrap;
+		overflow-x: auto;
+
+		@include breakpoint_d(xl_1200){
+			padding-right: 70px;
+		}
+		@include breakpoint_d(md_768){
+			font-size: 1.2rem;
+		}
+
+		a {
+			transition: color $transition;
+
+			&:hover {
+				color: $gray_light;
+			}
+		}
+	}
+
+	.header__top_live {
+		display: flex;
+		align-items: center;
+		padding-left: 40px;
+		background: linear-gradient(to right, rgba($white, 0), $white 35%);
+		position: absolute;
+		top: 50%;
+		right: 0;
+		z-index: 1;
+		transform: translateY(-50%);
+
+		@include breakpoint_u(xl_1201){
+			display: none;
+		}
+		
+		a {
+			padding: 2px 8px 2px 18px;
+			background-color: $yellow;
+			font-size: 1rem;
+			font-weight: 600;
+			border-radius: 10px;
+			position: relative;
+
+			&:before {
+				content: '';
+				display: block;
+				width: 8px;
+				aspect-ratio: 1;
+				background-color: $black_2;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 6px;
+				z-index: 0;
+				transform: translateY(-50%);
+			}
+		}
+	}// /.header__top_live
+}// /.header__top_nav

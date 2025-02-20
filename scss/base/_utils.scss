@@ -1,0 +1,38 @@
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	overflow-x: hidden;
+
+	.container {
+		--containerWidth: 1280px;
+		--paddingX: 40px;
+		
+		width: 100%;
+		max-width: calc(var(--containerWidth) + var(--paddingX) * 2);
+		margin-inline: auto;
+		padding-inline: var(--paddingX);
+
+		@include breakpoint_d(md_768){
+			max-width: 100%;
+			--paddingX: 15px;
+		}
+	}
+}
+
+.visually-hidden {
+	@include visually-hidden;
+}
+
+body.aside_menu_opened {
+	position: relative;
+	overflow: hidden;
+
+	@include breakpoint_u(xl_1201){
+		padding-right: 15px;
+	}
+
+	
+}

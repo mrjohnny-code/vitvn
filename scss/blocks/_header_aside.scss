@@ -1,0 +1,85 @@
+.header__aside_menu {
+	display: none;
+	width: 300px;
+	height: 100dvh;
+	padding: 25px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background-color: $white;
+	box-shadow: 0 0 50px 50px rgba($black, .25);
+
+	.aside_menu_opened & {
+		display: block;
+	}
+
+	.header__aside_logo {
+		display: block;
+		width: 90px;
+		height: 90px;
+		margin: 0 auto 25px;
+
+		svg path {
+			fill: $blue;
+		}
+	}
+
+	.header__close_button {
+		width: 14px;
+		height: 14px;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		position: absolute;
+		top: 70px;
+		left: 25px;
+		z-index: 1;
+		transition: opacity $transition;
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		svg path {
+			fill: $black_2;
+		}
+	}
+
+	.header__aside_nav {
+		height: calc(100dvh - 165px);
+		overflow-y: auto;
+
+		.header__aside_list {
+			font-weight: 700;
+			line-height: 22px;
+
+			a {
+				display: block;
+				transition: opacity $transition;
+
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+			
+			.header__list_item {
+				padding: 20px;
+				border-top: 1px solid $gray_light;
+
+				&.dropdown__menu {
+					.dropdown__menu_list {
+						padding-left: 15px;
+
+						.dropdown__list_item {
+							margin-top: 15px;
+							color: $blue;
+							font-weight: 400;
+							line-height: 22px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

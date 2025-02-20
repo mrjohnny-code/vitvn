@@ -1,0 +1,16 @@
+@import './base/vars';
+@import './base/mixins';
+@import './base/fonts';
+@import './base/reset';
+@import './base/buttons';
+@import './base/utils';
+
+// BLOCKS
+@import './blocks/header_top';
+@import './blocks/header';
+@import './blocks/header_search';
+@import './blocks/header_aside';
+@import './blocks/footer';
+@import './blocks/intro';
+@import './blocks/content';
+@import './blocks/registration';

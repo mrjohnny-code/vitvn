@@ -1,0 +1,122 @@
+.intro {
+	margin-bottom: 60px;
+
+	@include breakpoint_d(md_768){
+		margin-bottom: 40px;
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		padding: 15px 0;
+		background: url('./../images/intro-bg.png') center / cover no-repeat;
+
+		img {
+			width: auto;
+			height: 104px;
+		}
+	}// /.intro__image
+
+	&__nav {
+		padding-block: 12px;
+		background-color: $blue_dark;
+
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+
+		&_list {
+			display: flex;
+			align-items: center;
+			column-gap: 30px;
+			color: $white;
+
+			@include breakpoint_d(xl_1200){
+				display: none;
+				flex-direction: column;
+				align-items: stretch;
+				row-gap: 12px;
+				min-width: 160px;
+				padding: 20px;
+				background-color: $white;
+				box-shadow: 0 24px 48px 2px rgba($black, .25);
+				color: $gray;
+				position: absolute;
+				top: 25px;
+				left: 15px;
+				z-index: 1;
+			}
+
+			&.menu_opened {
+				display: flex;
+			}
+
+			.intro__list_item {
+				transition: opacity $transition;
+
+				@include breakpoint_d(xl_1200){
+					font-size: 1.5rem;
+					line-height: 18px;
+					text-wrap: nowrap;
+					position: relative;
+					cursor: pointer;
+					transition: none;
+
+					&:before {
+						content: '';
+						display: block;
+						width: 4px;
+						height: 100%;
+						background-color: $black;
+						position: absolute;
+						top: 0;
+						left: -20px;
+						z-index: 0;
+						opacity: 0;
+						transition: opacity $transition;
+					}
+				
+					&:hover {
+						color: $black;
+				
+						&:before {
+							opacity: 1;
+						}
+					}
+				
+					a {
+						display: block;
+					}
+				}// /breakpoint
+
+				&:hover {
+					@include breakpoint_u(xl_1201){
+						opacity: 0.6;
+					}
+				}
+			}// /.intro__list_item
+		}
+
+		.intro__burger_button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			column-gap: 5px;
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			color: $white;
+			line-height: 26px;
+			text-transform: uppercase;
+
+			@include breakpoint_u(xl_1201){
+				display: none;
+			}
+
+			svg path {
+				fill: $white;
+			}
+		}
+	}
+}

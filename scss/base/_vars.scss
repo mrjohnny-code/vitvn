@@ -1,0 +1,46 @@
+// fonts
+$oxygen: 'Oxygen', sans-serif;
+
+// media breaklpoints
+$grid-breakpoints: (
+	xs_0: 0,
+	sm_576: 576px,
+	md_768: 768px,
+	lg_992: 992px,
+	xl_1200: 1200px,
+	xxl: 1440px
+);
+
+$grid-breakpoints_u: (
+	xs_0: 0,
+	sm_577: 577px,
+	md_769: 769px,
+	lg_993: 993px,
+	xl_1201: 1201px,
+	xxl: 1441px
+);
+
+// colors
+$white: #ffffff;
+$black: #000000;
+$black_2: #2a2a2a;
+$gray_light: #c7c7c7;
+$gray_light_2: #ccc;
+$gray_light_3: #ebebeb;
+$gray: #9b9b9b;
+$gray_2: #6b6b6b;
+$blue_dark: #003676;
+$blue: #058;
+$blue_2: #0077c8;
+$yellow: #fec526;
+$red: #e00710;
+
+// base
+$body-bg: $white;
+$body-color: $black_2;
+$font-family-base: $oxygen;
+$font-size-base: 1.7rem;
+$line-height-base: 1.34;
+$links-color-base: inherit;
+$headings-font-weight: 700;
+$transition: .2s ease;

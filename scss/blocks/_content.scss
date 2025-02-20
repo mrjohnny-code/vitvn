@@ -1,0 +1,158 @@
+.content {
+	margin-bottom: 40px;
+
+	.container {
+		--containerWidth: 844px;
+	}
+
+	&__head {
+		margin-bottom: 30px;
+
+		&_title {
+			margin-bottom: 20px;
+			font-size: 4.2rem;
+			font-weight: 800;
+			line-height: 44px;
+
+			@include breakpoint_d(xl_1200){
+				font-size: 3rem;
+				line-height: 34px;
+			}
+			@include breakpoint_d(md_768){
+				font-size: 2.6rem;
+				line-height: 28px;
+			}
+		}
+		
+		&_subtitle {
+			font-size: 2.4rem;
+			font-weight: 400;
+			line-height: 32px;
+
+			@include breakpoint_d(xl_1200){
+				font-size: 2rem;
+				line-height: 29px;
+			}
+			@include breakpoint_d(md_768){
+				font-size: 1.8rem;
+				line-height: 28px;
+			}
+		}
+	}// /.content__head
+
+	&__image {
+		margin: 0 0 20px;
+		padding: 0;
+
+		picture {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		figcaption {
+			display: block;
+			color: $gray_2;
+			font-size: 1.5rem;
+			line-height: 21px;
+			position: relative;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 50px;
+				height: 4px;
+				background-color: $red;
+				position: absolute;
+				left: 0;
+				bottom: -10px;
+				z-index: 0;
+			}
+		}
+	}// /.content__image
+
+	&__authors {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 20px;
+
+		&_title {
+			color: $black;
+			font-weight: 700;
+		}
+
+		&_link {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			column-gap: 5px;
+			color: $gray_2;
+			font-size: 1.5rem;
+			line-height: 18px;
+			position: relative;
+
+			&:before {
+				content: '';
+				display: block;
+				width: 16px;
+				height: 13px;
+				background: url('./../images/icons/xtwitter.svg') center / 100% no-repeat;
+			}
+		}
+
+		a {
+			transition: opacity $transition;
+
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}// /.content__authors
+
+	&__date {
+		margin-bottom: 20px;
+		color: $gray_2;
+		line-height: 26px;
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		column-gap: 15px;
+		margin-bottom: 35px;
+
+		@include breakpoint_d(md_768){
+			flex-wrap: wrap;
+			row-gap: 15px;
+		}
+
+		&_item {
+			max-width: 20px;
+			transition: opacity $transition;
+
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}// /.content__socials
+
+	&__text {
+		.place {
+			margin-right: 10px;
+			color: $gray_2;
+			font-size: 1.8rem;
+			line-height: 28px;
+			text-transform: uppercase;
+		}
+
+		a {
+			color: $blue_dark;
+			font-weight: 700;
+
+			&:hover {
+				color: $red;
+			}
+		}
+	}// /.content__text
+}
